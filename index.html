@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Gestión de Clientes</h2>
+
+        <form id="clienteForm">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+            <input type="text" id="tipoDocumento" placeholder="Tipo de Documento" required>
+            <input type="text" id="numeroDocumento" placeholder="Número de Documento" required>
+            <input type="text" id="ciudad" placeholder="Ciudad" required>
+            <input type="text" id="direccion" placeholder="Dirección" required>
+            <input type="tel" id="telefono" placeholder="Teléfono" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <button type="submit">Agregar Cliente</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Tipo Doc.</th>
+                    <th>Número Doc.</th>
+                    <th>Ciudad</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="clientesTabla"></tbody>
+        </table>
+
+        <div class="export-buttons">
+            <button class="xlsx" onclick="exportToXLSX()">Exportar a XLSX</button>
+            <button class="pdf" onclick="exportToPDF()">Exportar a PDF</button>
+        </div>
+    </div>
+
+    <!-- librerías necesarias -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
